@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - FreshBite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .auth-page {
+      min-height: 100vh;
+      padding: 0;
+      background: linear-gradient(135deg, #2c5f2d 0%, #1a4620 25%, #d65d36 75%, #c44c24 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      width: 100%;
+      padding: 0.8rem 0;
+    }
+
+    .auth-page::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 520px;
+      height: 520px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      filter: blur(40px);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .auth-page::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(30px); }
+    }
+
+    .auth-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .auth-container .container {
+      padding: 0 20px;
+    }
+
+    .auth-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+      overflow: hidden;
+      width: min(860px, calc(100vw - 2rem));
+      max-width: 860px;
+      height: calc(100vh - 1.5rem);
+      margin: 0 auto;
+    }
+
+    .auth-card-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
+      width: 100%;
+      gap: 0;
+      align-items: stretch;
+      height: 100%;
+    }
+
+    .auth-visual {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+
+    .auth-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26,26,26,0.24), rgba(26,26,26,0.72));
+    }
+
+    .visual-text {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: white;
+      max-width: 260px;
+      z-index: 1;
+    }
+
+    .visual-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .visual-text p {
+      color: rgba(255,255,255,0.92);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .auth-form-wrapper {
+      padding: 1.5rem 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      overflow-y: auto;
+      gap: 0.2rem;
+    }
+
+    .auth-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.85rem;
+    }
+
+    .auth-brand-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #d65d36, #f7b801);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    .auth-brand h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+      color: #1a1a1a;
+    }
+
+    .auth-brand p {
+      color: #666;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .auth-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.35rem;
+    }
+
+    .auth-subtitle {
+      color: #666;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .form-control {
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background: #f9f9f9;
+    }
+
+    .form-control:focus {
+      border-color: #d65d36;
+      box-shadow: 0 0 0 3px rgba(214,93,54,0.1);
+      background: white;
+    }
+
+    .form-check {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-check-input {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form-check-input:checked {
+      background-color: #d65d36;
+      border-color: #d65d36;
+    }
+
+    .btn-auth {
+      background: linear-gradient(135deg, #d65d36, #c44c24);
+      border: none;
+      border-radius: 12px;
+      padding: 0.85rem 0;
+      font-weight: 700;
+      color: white;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-auth:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(214,93,54,0.3);
+      color: white;
+    }
+
+    .auth-divider {
+      text-align: center;
+      margin: 0.35rem 0;
+      position: relative;
+    }
+
+    .auth-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .auth-divider span {
+      background: white;
+      padding: 0 1rem;
+      color: #999;
+      position: relative;
+      font-size: 0.85rem;
+    }
+
+    .social-login {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .social-btn {
+      flex: 1;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      background: white;
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+    }
+
+    .social-btn:hover {
+      border-color: #d65d36;
+      color: #d65d36;
+    }
+
+    .auth-footer {
+      text-align: center;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .auth-footer a {
+      color: #d65d36;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .auth-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .back-to-home {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      z-index: 20;
+    }
+
+    .back-link {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      gap: 1rem;
+    }
+
+    .password-strength {
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+
+    .password-strength-bar {
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .password-strength.weak .password-strength-bar { width: 33%; background: #e74c3c; }
+    .password-strength.medium .password-strength-bar { width: 66%; background: #f6a400; }
+    .password-strength.strong .password-strength-bar { width: 100%; background: #1e9b68; }
+
+    @media (max-width: 768px) {
+      .auth-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-visual {
+        min-height: 260px;
+      }
+
+      .auth-form-wrapper {
+        padding: 2rem 1.5rem;
+      }
+
+      .auth-title {
+        font-size: 1.5rem;
+      }
+
+      .auth-card {
+        max-width: 100%;
+      }
+
+      .back-to-home {
+        top: 1rem;
+        left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="auth-page">
+  <a href="index.html" class="back-to-home">
+    <span class="back-link"><i class="fas fa-arrow-left"></i> Back</span>
+  </a>
+
+  <div class="auth-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+          <div class="auth-card">
+            <div class="auth-card-grid">
+              <div class="auth-visual">
+                <div class="visual-text">
+                  <h3>Delicious meals, instantly</h3>
+                  <p>Create your account and start ordering chef-curated dishes today.</p>
+                </div>
+              </div>
+              <div class="auth-form-wrapper">
+                <div class="auth-brand">
+                <div class="auth-brand-icon"><i class="fas fa-utensils"></i></div>
+                <div>
+                  <h1>FreshBite</h1>
+                  <p>Premium Food Delivery</p>
+                </div>
+              </div>
+
+              <h2 class="auth-title">Join Us Today</h2>
+              <p class="auth-subtitle">Create your account and start ordering premium meals</p>
+
+              <div class="social-login">
+                <a href="#" class="social-btn"><i class="fab fa-google"></i> Google</a>
+                <a href="#" class="social-btn"><i class="fab fa-apple"></i> Apple</a>
+              </div>
+
+              <div class="auth-divider">
+                <span>or sign up with email</span>
+              </div>
+
+              <form id="auth-form" data-redirect="login.html">
+                <div class="form-group">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" placeholder="John Doe" autocomplete="name" required>
+                  <div class="invalid-feedback">Please provide your full name.</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="your@email.com" autocomplete="email" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" placeholder="9876543210" autocomplete="tel" pattern="[0-9]{10}" required>
+                  <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control password-input" placeholder="Create a strong password" autocomplete="new-password" required>
+                  <div class="password-strength" id="strengthBar">
+                    <div class="password-strength-bar"></div>
+                  </div>
+                  <div class="invalid-feedback">Please create a password.</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input type="password" name="confirm" class="form-control" placeholder="Re-enter your password" autocomplete="new-password" required>
+                  <div class="invalid-feedback">Please confirm your password.</div>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                  <label class="form-check-label" for="termsCheck">
+                    I agree to the <a href="#" style="color: #d65d36;">Terms of Service</a> and <a href="#" style="color: #d65d36;">Privacy Policy</a>
+                  </label>
+                  <div class="invalid-feedback">You must agree to the terms to continue.</div>
+                </div>
+
+                <button type="submit" class="btn btn-auth">Create Account</button>
+              </form>
+
+              <div class="auth-footer mt-4">
+                Already have an account? <a href="login.html">Sign in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('.password-input')?.addEventListener('input', (e) => {
+      const password = e.target.value;
+      const strengthBar = document.getElementById('strengthBar');
+      
+      if (password.length < 6) {
+        strengthBar.className = 'password-strength weak';
+      } else if (password.length < 10) {
+        strengthBar.className = 'password-strength medium';
+      } else {
+        strengthBar.className = 'password-strength strong';
+      }
+    });
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>

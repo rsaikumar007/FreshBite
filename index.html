@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBite | Premium Food Ordering SaaS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- STICKY PREMIUM NAVBAR -->
+  <header class="topbar sticky-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#home">
+          <div class="brand-icon"><i class="fas fa-utensils"></i></div>
+          <div>
+            <div class="brand-title">FreshBite</div>
+            <small class="brand-subtitle">Premium Food Delivery</small>
+          </div>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="#home"><i class="fas fa-home me-2"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#categories"><i class="fas fa-th me-2"></i>Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#specials"><i class="fas fa-star me-2"></i>Limited Offers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu"><i class="fas fa-plate-wheat me-2"></i>Full Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reviews"><i class="fas fa-comment-dots me-2"></i>Reviews</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2">
+            <a href="login.html" class="btn btn-sm btn-text">Sign In</a>
+            <a href="signUp.html" class="btn btn-sm btn-primary rounded-pill">Join Free</a>
+            <button class="btn btn-sm btn-outline-primary rounded-pill position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+              <i class="fas fa-shopping-bag me-2"></i>Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-badge">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION WITH PREMIUM IMAGERY -->
+    <section class="hero-premium" id="home">
+      <div class="hero-background">
+        <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1600&q=80" alt="Hero food imagery">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container position-relative">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <span class="badge badge-light mb-3">⚡ Fresh Meals Delivered in 30 Minutes</span>
+              <h1 class="display-3 fw-bold mb-4">Premium Dining, Delivered to Your Door</h1>
+              <p class="lead text-light mb-5">Experience chef-curated meals with premium ingredients. Order now and get your first meal at 25% off.</p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#menu" class="btn btn-primary btn-lg rounded-pill">Explore Menu</a>
+                <a href="#specials" class="btn btn-outline-light btn-lg rounded-pill">Today's Specials</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Happy Customers</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">4.9★</div>
+                <div class="stat-label">Average Rating</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Premium Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD CATEGORIES GRID -->
+    <section class="section py-6" id="categories">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="eyebrow">🍽️ DISCOVER</span>
+          <h2>Curated Food Categories</h2>
+          <p>Premium restaurants and chefs delivering to your area</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=60" alt="Indian">
+              <div class="category-overlay">
+                <h5>Indian Cuisine</h5>
+                <p>Authentic traditional recipes</p>
+                <a href="#menu" class="btn btn-sm btn-light rounded-pill">Browse</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=60" alt="Italian">
+              <div class="category-overlay">
+                <h5>Italian Pasta</h5>
+                <p>Fresh homemade pasta daily</p>
+                <a href="#menu" class="btn btn-sm btn-light rounded-pill">Browse</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=500&q=60" alt="Asian">
+              <div class="category-overlay">
+                <h5>Asian Fusion</h5>
+                <p>Modern flavors from East</p>
+                <a href="#menu" class="btn btn-sm btn-light rounded-pill">Browse</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=60" alt="Healthy">
+              <div class="category-overlay">
+                <h5>Healthy Bowls</h5>
+                <p>Nutritious & delicious</p>
+                <a href="#menu" class="btn btn-sm btn-light rounded-pill">Browse</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIMITED SPECIALS - VIEW ONLY (NO CART) -->
+    <section class="section py-6 bg-light" id="specials">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="eyebrow">✨ TODAY'S HIGHLIGHTS</span>
+          <h2>Chef's Limited Edition Specials</h2>
+          <p>Premium curated selections available for a limited time</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="special-card premium-border">
+              <div class="special-badge">Limited Edition</div>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Truffle Pasta">
+              <div class="special-info">
+                <h5>Black Truffle Pasta</h5>
+                <p class="text-muted">Handcrafted pasta with premium truffle oil, wild mushrooms, and parmesan shavings</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price-premium">₹449</span>
+                  <span class="badge bg-success">4.8★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="special-card premium-border">
+              <div class="special-badge">Chef's Pick</div>
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Paneer Deluxe">
+              <div class="special-info">
+                <h5>Tandoori Paneer Deluxe</h5>
+                <p class="text-muted">Sizzling grilled paneer with aromatic basmati rice, raita, and fresh vegetables</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price-premium">₹349</span>
+                  <span class="badge bg-success">4.9★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="special-card premium-border">
+              <div class="special-badge">Bestseller</div>
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Gourmet Thali">
+              <div class="special-info">
+                <h5>Gourmet Thali Experience</h5>
+                <p class="text-muted">Complete meal with curries, breads, rice, sides and authentic dessert</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price-premium">₹599</span>
+                  <span class="badge bg-success">5.0★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL PREMIUM MENU WITH CART -->
+    <section class="section py-6" id="menu">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="eyebrow">🍴 EXPLORE</span>
+          <h2>Complete Menu</h2>
+          <p>Search and add items to your cart</p>
+        </div>
+
+        <div class="menu-controls mb-5">
+          <div class="row align-items-center g-3">
+            <div class="col-md-8">
+              <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="search" id="menu-search" class="search-input" placeholder="Search dishes, ingredients, restaurants...">
+              </div>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <button id="clear-search" class="btn btn-outline-primary rounded-pill">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4" id="menu-grid">
+          <!-- Menu items will be populated here -->
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Masala Dosa" data-price="150">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Masala Dosa">
+                <span class="price-tag">₹150</span>
+              </div>
+              <div class="menu-content">
+                <h5>Masala Dosa</h5>
+                <p class="text-muted">Crispy dosa with spiced potato filling, sambar and chutney</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-primary">Spicy</span>
+                  <span class="badge bg-soft-info">South Indian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Idli Sambar" data-price="120">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Idli Sambar">
+                <span class="price-tag">₹120</span>
+              </div>
+              <div class="menu-content">
+                <h5>Idli Sambar</h5>
+                <p class="text-muted">Steamed soft idlis with tangy sambar and coconut chutney</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-success">Vegan</span>
+                  <span class="badge bg-soft-info">South Indian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Veg Biryani" data-price="220">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Veg Biryani">
+                <span class="price-tag">₹220</span>
+              </div>
+              <div class="menu-content">
+                <h5>Veg Biryani</h5>
+                <p class="text-muted">Aromatic basmati rice with vegetables and fragrant spices</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-primary">Moderate Spice</span>
+                  <span class="badge bg-soft-info">Indian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Paneer Butter Curry" data-price="280">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Paneer Butter Curry">
+                <span class="price-tag">₹280</span>
+              </div>
+              <div class="menu-content">
+                <h5>Paneer Butter Curry</h5>
+                <p class="text-muted">Tender paneer in creamy tomato sauce with fresh cream</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-warning">Popular</span>
+                  <span class="badge bg-soft-info">Indian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Chole Bhature" data-price="180">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1484723614727-1173eb44f46c?auto=format&fit=crop&w=400&q=80" alt="Chole Bhature">
+                <span class="price-tag">₹180</span>
+              </div>
+              <div class="menu-content">
+                <h5>Chole Bhature</h5>
+                <p class="text-muted">Fluffy fried bread served with spiced chickpea curry</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-primary">Spicy</span>
+                  <span class="badge bg-soft-info">North Indian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="menu-card" data-name="Veg Momos" data-price="140">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1534080564595-c1b1f8cff0be?auto=format&fit=crop&w=400&q=80" alt="Veg Momos">
+                <span class="price-tag">₹140</span>
+              </div>
+              <div class="menu-content">
+                <h5>Veg Momos</h5>
+                <p class="text-muted">Steamed vegetable dumplings with spicy schezwan sauce</p>
+                <div class="d-flex gap-2">
+                  <span class="badge bg-soft-primary">Spicy</span>
+                  <span class="badge bg-soft-info">Asian</span>
+                </div>
+                <button class="btn btn-primary btn-sm w-100 mt-3 add-cart"><i class="fas fa-plus me-2"></i>Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="section py-6 bg-light" id="reviews">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="eyebrow">⭐ CUSTOMERS LOVE</span>
+          <h2>What Our Users Say</h2>
+          <p>Real reviews from verified customers</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="review-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="review-text">"The food quality is exceptional and delivery is incredibly fast. This is the best food app I've used."</p>
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">JD</div>
+                <div>
+                  <h6>John Doe</h6>
+                  <small>Verified Customer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="review-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+              <p class="review-text">"Premium presentation and taste. Feels like ordering from a high-end restaurant. Absolutely worth it."</p>
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">AS</div>
+                <div>
+                  <h6>Anita Singh</h6>
+                  <small>Verified Customer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="review-card">
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="review-text">"Variety is amazing and the app interface is so smooth. Customer service is always helpful."</p>
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">RG</div>
+                <div>
+                  <h6>Rohan Gupta</h6>
+                  <small>Verified Customer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section py-6 newsletter-bg">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2>Get Exclusive Offers & Updates</h2>
+            <p class="lead text-muted">Subscribe to get fresh meal recommendations and special discounts</p>
+          </div>
+          <div class="col-lg-6">
+            <form id="newsletter-form" class="d-flex gap-2">
+              <input type="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PREMIUM FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4 mb-5">
+        <div class="col-md-4">
+          <h5>FreshBite</h5>
+          <p class="text-muted">Premium food ordering platform delivering chef-curated meals to your door.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Support</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center text-muted">
+        <p>© 2026 FreshBite. Premium food ordering for modern diners.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART OFFCANVAS -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header">
+      <h5>Your Order</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cart-items" class="cart-items-list mb-4"></div>
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span>
+          <span>₹40</span>
+        </div>
+        <div class="summary-row text-primary fw-bold">
+          <span>Total</span>
+          <span id="cart-total">₹40</span>
+        </div>
+      </div>
+      <button id="checkout-btn" class="btn btn-primary btn-lg w-100 mt-4">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); border: none;">
+        <div class="modal-header" style="background: linear-gradient(135deg, #d65d36, #c44c24); color: white; border-bottom: none; border-radius: 20px 20px 0 0;">
+          <h5 class="modal-title fw-bold" id="checkoutModalLabel">
+            <i class="fas fa-shopping-cart me-2"></i>Checkout
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-4">
+            <h6 class="text-muted">Order Summary</h6>
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="card border-0 shadow-sm" style="background: #f8f9fa;">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="fw-semibold">Subtotal</span>
+                      <span id="modal-subtotal">₹0</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="fw-semibold">Delivery</span>
+                      <span>₹40</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-bold text-primary">Total</span>
+                      <span id="modal-total" class="fw-bold text-primary">₹40</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="text-muted mb-4">Ready to place your order? Complete your payment to enjoy your delicious meal!</p>
+            <button id="complete-payment-btn" class="btn btn-lg w-100" style="background: linear-gradient(135deg, #d65d36, #c44c24); border: none; color: white; border-radius: 12px; font-weight: 600;">
+              <i class="fas fa-credit-card me-2"></i>Complete Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

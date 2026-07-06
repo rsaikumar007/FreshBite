@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order Site</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Code for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Code for font awesome -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <img src="logo.png" class="logo" alt="">
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#features">Our Features</a>
+            <a href="#menu">Menu</a>
+            <a href="#orders">Orders</a>
+            <a href="#review">Review</a>
+            <a href="#aboutUs">About Us</a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+        </div>
+
+    <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here....">
+        <label for="search-box" class="fa fa-search"></label>
+    </form>
+
+
+    <div class="shopping-cart">
+        <div class="box">
+            <img src="image/food/5.jpg" width="100rem" height="80rem" alt="">
+            <br>
+            <i class="fa fa-trash"></i>
+            <div class="content">
+                <h3>Special Veg Thali</h3>
+                <span class="price">Rs. 200</span>
+                <span class="quantity">Qty: 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/food/fast1.jpg" width="100rem" height="80rem" alt=""><br>
+            <i class="fa fa-trash"></i>
+            <div class="content">
+                <h3>Masala Dosa</h3>
+                <span class="price">Rs. 130</span>
+                <span class="quantity">Qty: 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/food/fast7.jpg" width="100rem" height="80rem" alt=""><br>
+            <i class="fa fa-trash"></i>
+            <div class="content">
+                <h3>Idli with Chutney</h3>
+                <span class="price">Rs. 70</span>
+                <span class="quantity">Qty: 1</span>
+            </div>
+        </div>
+
+    <div class="total">Total: Rs. 400/-</div>
+    <a href="#" class="btn">Checkout</a>
+    </div>
+
+
+    <form action="#" class="login-form">
+        <h3>Login Now</h3>
+        <input type="email" placeholder="Your Email" class="box">
+        <input type="password" placeholder="Your password" class="box">
+
+    <p>Forgot Your Password <a href="#"> Click Here</a></p>
+    <p>Don't have an account <a href="signUp.html"> Create Now</a></p>
+
+        <input type="submit" value="Login Now" class="btn">
+    </form>
+
+    </header>
+    <!-- header section -->
+    
+    <!-- banner section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh and <span>Tasty Food</span> for you</h3>
+            <p>This site is created by G1 group using HTML, CSS and JS to learn frontend concepts in an easy way</p>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </section>
+    <!-- banner section -->
+    
+    <!-- Our feature section -->
+    <section class="features" id="features">
+        <h1 class="heading"> Our <span>Features</span> </h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="./image/food/pasta6.jpg" height="100px" width="140px" alt="" style="border-radius: 5rem;">
+                <h3>Fresh and Healthy</h3>
+                <p>We prepare food from fresh material, and quality product is used considering the health.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="box">
+                <img src="./image/feature-img-2.png" height="100px" alt="">
+                <h3>Free Delivery</h3>
+                <p>We provide free delivery for customers who are located within the radius of 4km.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="box">
+                <img src="./image/feature-img-3.png" height="100px" alt="">
+                <h3>Easy payments</h3>
+                <p>We accpet all modes of payment like Cash, UPI and credit/Debit cards.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Our feature section -->
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h1 class="heading"><span>Menu</span></h1>
+        <div class="menu">
+            <div class="wrapper">
+                <div class="box">
+                    <img src="./image/food/5.jpg" alt="" width="300px" height="300px">
+                    <h1>Special Veg Thali</h1>
+                    <div class="price">Rs. 200/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/fast1.jpg" alt="" width="300px" height="300px">
+                    <h1>Masala Dosa</h1>
+                    <div class="price">Rs. 130/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/fast7.jpg" alt="" width="300px" height="300px">
+                    <h1>Idli with Chutney</h1>
+                    <div class="price">Rs. 70/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/fast3.jpg" alt="" width="300px" height="300px">
+                    <h1>Veg Momos</h1>
+                    <div class="price">Rs. 80/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+                <div class="box">
+                    <img src="./image/food/fast2.jpg" alt="" width="300px" height="300px">
+                    <h1>Bread Pakoda</h1>
+                    <div class="price">Rs. 50/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/fast8.jpg" alt="" width="300px" height="300px">
+                    <h1>French Fries</h1>
+                    <div class="price">Rs. 60/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/pasta5.jpg" alt="" width="300px" height="300px">
+                    <h1>White Sauce Pasta</h1>
+                    <div class="price">Rs. 99/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./image/food/pasta8.jpg" alt="" width="300px" height="300px">
+                    <h1>Red Sauce Pasta (With Soup)</h1>
+                    <div class="price">Rs. 79/-</div>
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <a href="" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        </div>
+    </section>
+    <!-- Menu Section -->
+
+    <!-- reviews section -->
+    <section class="review" id="review">
+        <h1 class="heading">Customer's <span>Reviews</span> </h1>
+
+        <div class="review">
+            <div class="wrapper">
+                <div class="box">
+                    <img src="image/pic-1.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum sint dignissimos officiis reprehenderit architecto. Ipsum officiis iste esse quaerat quod facere similique porro aut.</p>
+                    <h3>John Deo</h3>
+                    <div class=stars>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="image/pic-2.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum sint dignissimos officiis reprehenderit architecto. Ipsum officiis iste esse quaerat quod facere similique porro aut.</p>
+                    <h3>John Deo</h3>
+                    <div class=stars>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="image/pic-3.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum sint dignissimos officiis reprehenderit architecto. Ipsum officiis iste esse quaerat quod facere similique porro aut.</p>
+                    <h3>John Deo</h3>
+                    <div class=stars>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="image/pic-4.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum sint dignissimos officiis reprehenderit architecto. Ipsum officiis iste esse quaerat quod facere similique porro aut.</p>
+                    <h3>John Deo</h3>
+                    <div class=stars>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- reviews section -->
+
+    <!-- footer section -->
+    <section class="footer" id="aboutUs">
+        <div class="box-container">
+            <div class="box">
+                <h3>Logo</h3>
+                <p>Feel Free To Follow Us On Our Social Media Hadles. All Links Are Given Below.</p>
+                <div class=share>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="fa fa-links"><i class="fa fa-phone"></i> +91-1234567894</a>
+                <a href="#" class="fa fa-links"><i class="fa fa-phone"></i> +91-9876543214</a>
+                <a href="#" class="fa fa-links"><i class="fa fa-envelope"></i> info@example.com</a>
+                <a href="#" class="fa fa-links"><i class="fa fa-map-marker"></i> Rajpura, Punjab (140401)</a>
+            </div>
+
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#" class="links"><i class="fa fa-arrow-right"></i> Home</a>
+                <a href="#" class="links"><i class="fa fa-arrow-right"></i> Features</a>
+                <a href="#" class="links"><i class="fa fa-arrow-right"></i> Menu</a>
+                <a href="#" class="links"><i class="fa fa-arrow-right"></i> Order Food</a>
+                <a href="#" class="links"><i class="fa fa-arrow-right"></i> Reviews</a>
+            </div>
+
+
+            <div class="box">
+                <h3> Newsletter </h3>
+                <p>Subscribe for latest updates</p>
+                <input type="email" placeholder="Your email" class="email">
+                <input type="submit" value="Subscribe" class="btn">
+                <img src="image/payment.png" alt="" class="payment-img">
+            </div>
+
+        </div>
+
+
+        <div class="credit">Created by <span>Anurag & Achintya</span> | All Rights Reserved</div>
+    </section>
+    <!-- footer section -->
+
+    <script src="script.js"></script>
+</body>
+</html>

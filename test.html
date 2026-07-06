@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeVerse | Sai Kumar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(15,23,42,.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+radial-gradient(circle at top,#1e3a8a 0%,#0f172a 60%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#38bdf8;
+}
+
+.typing{
+font-size:1.6rem;
+color:#38bdf8;
+height:40px;
+font-weight:600;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.btns{
+margin-top:35px;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+margin:10px;
+display:inline-block;
+transition:.3s;
+}
+
+.primary{
+background:#38bdf8;
+color:white;
+}
+
+.secondary{
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:50px;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+padding:30px;
+}
+
+.about{
+text-align:center;
+font-size:18px;
+line-height:1.8;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+font-size:3rem;
+color:#38bdf8;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.skill-card{
+padding:25px;
+text-align:center;
+transition:.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+padding:25px;
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+}
+
+.project h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+.timeline{
+border-left:3px solid #38bdf8;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.timeline-item h3{
+color:#38bdf8;
+}
+
+.achievements li{
+margin:15px 0;
+font-size:18px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:12px 0;
+font-size:18px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+padding:15px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">CodeVerse</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Hi, I'm <span>Sai Kumar</span></h1>
+
+<div class="typing" id="typing"></div>
+
+<p>
+Passionate Java Developer focused on building scalable backend systems,
+REST APIs, and modern web applications using Java, Spring Boot, and MySQL.
+</p>
+
+<div class="btns">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="glass about">
+
+Currently pursuing M.Sc Computer Science with a CGPA of 8.6.
+Strong knowledge of Core Java, Spring Boot, REST APIs, Data Structures,
+Object-Oriented Programming, and Database Design.
+
+I enjoy solving real-world problems and creating impactful software
+solutions through clean and efficient code.
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Developer Stats</h2>
+
+<div class="stats">
+
+<div class="glass stat">
+<h2 id="c1">0</h2>
+<p>Projects</p>
+</div>
+
+<div class="glass stat">
+<h2 id="c2">0</h2>
+<p>Technologies</p>
+</div>
+
+<div class="glass stat">
+<h2 id="c3">0</h2>
+<p>Certificates</p>
+</div>
+
+<div class="glass stat">
+<h2 id="c4">0</h2>
+<p>Awards</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="glass skill-card">☕ Java</div>
+<div class="glass skill-card">🚀 Spring Boot</div>
+<div class="glass skill-card">🗄 MySQL</div>
+<div class="glass skill-card">🌐 REST APIs</div>
+<div class="glass skill-card">⚛ ReactJS</div>
+<div class="glass skill-card">💻 JavaScript</div>
+<div class="glass skill-card">📂 Git & GitHub</div>
+<div class="glass skill-card">📊 Data Structures</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="glass project">
+<h3>E-Commerce Web Application</h3>
+<p>
+Developed using Java, Spring Boot, and MySQL with
+authentication, product management, and order processing.
+</p>
+</div>
+
+<div class="glass project">
+<h3>Recipe Finder Application</h3>
+<p>
+Interactive web application for searching recipes
+based on ingredients and user preferences.
+</p>
+</div>
+
+<div class="glass project">
+<h3>VidoMitra</h3>
+<p>
+Social networking platform supporting real-time
+communication and video calling.
+</p>
+</div>
+
+<div class="glass project">
+<h3>Student Feedback System</h3>
+<p>
+Secure web-based feedback collection and analysis system.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Education</h2>
+
+<div class="glass timeline">
+
+<div class="timeline-item">
+<h3>M.Sc Computer Science</h3>
+<p>Bhavan's Vivekananda College (2024–2026)</p>
+<p>CGPA: 8.6</p>
+</div>
+
+<div class="timeline-item">
+<h3>B.Sc Computer Science</h3>
+<p>Bankatlal Badruka College (2020–2023)</p>
+<p>77%</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="glass">
+
+<ul class="achievements">
+<li>🏆 1st Place - Project Presentation</li>
+<li>🏆 1st Place - Poster Presentation</li>
+<li>☁ Participated in Cloud Computing Workshops</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="glass contact">
+
+<p>📧 lk260173@gmail.com</p>
+<p>📱 +91 XXXXXXXXXX</p>
+<p>🔗 Add LinkedIn Profile</p>
+<p>💻 Add GitHub Profile</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Sai Kumar | CodeVerse Portfolio
+</footer>
+
+<script>
+
+const words=[
+"Java Developer",
+"Backend Developer",
+"Spring Boot Developer",
+"Problem Solver"
+];
+
+let wordIndex=0;
+let charIndex=0;
+let deleting=false;
+
+function typeEffect(){
+
+let currentWord=words[wordIndex];
+
+if(!deleting){
+
+document.getElementById("typing").textContent=
+currentWord.substring(0,charIndex++);
+
+if(charIndex>currentWord.length){
+deleting=true;
+setTimeout(typeEffect,1000);
+return;
+}
+
+}else{
+
+document.getElementById("typing").textContent=
+currentWord.substring(0,charIndex--);
+
+if(charIndex===0){
+deleting=false;
+wordIndex=(wordIndex+1)%words.length;
+}
+}
+
+setTimeout(typeEffect,deleting?60:120);
+
+}
+
+typeEffect();
+
+function animateCounter(id,target){
+
+let count=0;
+
+const timer=setInterval(()=>{
+
+count++;
+
+document.getElementById(id).innerText=count+"+";
+
+if(count>=target){
+clearInterval(timer);
+}
+
+},50);
+
+}
+
+animateCounter("c1",4);
+animateCounter("c2",12);
+animateCounter("c3",3);
+animateCounter("c4",2);
+
+</script>
+
+</body>
+</html>
